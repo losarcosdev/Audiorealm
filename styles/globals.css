@@ -1,0 +1,59 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-duration: 0.5s !important;
+  animation-duration: 0.5s !important;
+  -webkit-animation-fill-mode: both !important;
+  animation-fill-mode: both !important;
+
+  -webkit-animation-name: fadeIn !important;
+  animation-name: fadeIn !important;
+}
+
+.primary-btn {
+  background-color: #dd7404 !important;
+  color: white !important;
+}
+
+.primary-btn:hover {
+  background-color: #d97e4a !important;
+}
+
+.summary-card {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.gradient-background-01 {
+  background-image: linear-gradient(
+    to right bottom,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
+    #080808,
+    #101010,
+    #151515,
+    #202020,
+    #2b2b2b,
+    #363636,
+    #424242
+  ) !important;
+}

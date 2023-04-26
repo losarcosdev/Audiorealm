@@ -1,0 +1,7 @@
+.category-card {
+  background-color: #f8f8f8 !important;
+  transition: 0.3s ease-in-out !important;
+}
+.category-card:hover {
+  transform: translateY(-5px) !important;
+}

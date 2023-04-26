@@ -1,0 +1,31 @@
+.left {
+  display: flex !important;
+  gap: 50px !important;
+}
+
+.left_1 {
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.img_wrap {
+  height: 80px !important;
+  border: 2px solid #eee !important;
+  cursor: pointer !important;
+}
+
+.img_wrap img {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: contain !important;
+}
+
+.left_2 img {
+  width: 400px !important;
+  height: 400px !important;
+  object-fit: contain !important;
+}
+
+.active {
+  border: 2px solid #dd7404 !important;
+}
