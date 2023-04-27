@@ -59,14 +59,16 @@ const AdminOrdersPage = () => {
     return <AdminLoading />;
   }
 
-  const rows = data!.map((order) => ({
-    id: order._id,
-    email: (order.user as IUser).email,
-    name: (order.user as IUser).name,
-    isPaid: order.isPaid,
-    numberOfProducts: order.totalNumberOfItems,
-    createdAt: order.createdAt,
-  }));
+  const rows = data!.map((order) => {
+    return {
+      id: order._id,
+      email: (order.user as IUser).email,
+      name: (order.user as IUser).name,
+      isPaid: order.isPaid,
+      numberOfProducts: order.totalNumberOfItems,
+      createdAt: order.createdAt,
+    };
+  });
 
   return (
     <AdminLayout

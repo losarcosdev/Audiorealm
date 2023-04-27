@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
 import { Typography, Box } from "@mui/material";
-import { FullScreenLoading, ProductList, ShopLayout } from "../../components";
-import { useProducts } from "../../hooks";
+import { NextPage } from "next";
+import { ShopLayout, FullScreenLoading, ProductList } from "../components";
+import { useProducts } from "../hooks";
 
 const EarphonePage: NextPage = () => {
   const { products, isLoading } = useProducts({

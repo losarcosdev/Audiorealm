@@ -11,7 +11,7 @@ const HomePage: NextPage = () => {
   return (
     <ShopLayout
       title={"Audiorealm | Home"}
-      metaDescription={"Find the best audio products here"}
+      metaDescription={"Find the best audio products here | Audiorealm"}
     >
       <HeroSection />
 

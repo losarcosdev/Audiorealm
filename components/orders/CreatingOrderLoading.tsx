@@ -3,7 +3,7 @@ import { ShopLayout } from "../layouts/ShopLayout";
 
 export const CreatingOrderLoading = () => {
   return (
-    <ShopLayout pageDescription="Creating order" title="Creating order...">
+    <ShopLayout title="Creating order...">
       <Box
         display="flex"
         justifyContent="center"

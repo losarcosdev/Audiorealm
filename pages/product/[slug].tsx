@@ -20,8 +20,6 @@ interface Props {
 }
 
 const ProductPage = ({ product }: Props) => {
-  console.log({ product });
-
   const { products, isError, isLoading } = useProducts({ url: "/products" });
   const router = useRouter();
   const { addProductToCart } = useContext(CartContext);

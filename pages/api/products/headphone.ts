@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { db, AUDIOPHILE_CONSTANTS } from "../../../database";
 import Product from "../../../models/Product";
 import { IProduct } from "../../../interfaces/products-2";
+import { db } from "../../../database";
 
 type Data =
   | {
@@ -12,23 +12,27 @@ type Data =
 const handler = (req: NextApiRequest, res: NextApiResponse<Data>) => {
   switch (req.method) {
     case "GET":
-      return getProducts(req, res);
+      return getHeadphones(req, res);
 
     default:
       res.status(401).json({ message: "Bad request" });
   }
 };
 
-const getProducts = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const getHeadphones = async (
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) => {
   try {
     db.connect();
-    const products = await Product.find()
+
+    const headphones = await Product.find({ category: "headphone" })
       .lean()
       .select("title images price inStock slug category -_id");
 
-    db.disconnect;
+    db.disconnect();
 
-    return res.status(200).json(products);
+    return res.status(200).json(headphones);
   } catch (error) {
     console.log(error);
   }

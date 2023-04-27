@@ -24,10 +24,7 @@ const CartPage = () => {
   }, [cart.length, router, isLoaded]);
 
   return (
-    <ShopLayout
-      title="Carrito - 3"
-      pageDescription={"Carrito de compras de la tienda"}
-    >
+    <ShopLayout title="Cart">
       <Grid
         container
         sx={{

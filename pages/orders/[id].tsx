@@ -64,10 +64,7 @@ const OrderPage = ({ order }: Props) => {
   };
 
   return (
-    <ShopLayout
-      title="Resumen de la orden 123671523"
-      pageDescription={"Resumen de la orden"}
-    >
+    <ShopLayout title={`Order: ${order._id}`}>
       <Box sx={{ padding: "40px" }}>
         <Typography variant="h1" component="h1" display="flex" flexWrap="wrap">
           Order:{order._id}
@@ -164,7 +161,7 @@ const OrderPage = ({ order }: Props) => {
                         }}
                         onApprove={(data, actions): any => {
                           return actions.order!.capture().then((details) => {
-                            handleApprovePayment(details);
+                            handleApprovePayment(details as any);
                           });
                         }}
                       />

@@ -88,7 +88,7 @@ const CheckoutPage = () => {
   if (loadingOrder) return <CreatingOrderLoading />;
 
   return (
-    <ShopLayout title="Checkout" pageDescription="Checkout">
+    <ShopLayout title="Checkout">
       <Box
         sx={{
           display: "flex",

@@ -36,7 +36,7 @@ export const AuthProvider: FC = ({ children }) => {
       const user = Cookies.get("user");
       if (user) {
         const userObj = JSON.parse(user);
-        dispatch({ type: "[Auth] - Login", payload: userObj as IUser });
+        dispatch({ type: "[Auth] - Login", payload: userObj.user as IUser });
       }
     }
   }, []);

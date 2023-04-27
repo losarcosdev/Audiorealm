@@ -52,7 +52,7 @@ const HistoryPage = ({ orders }: Props) => {
   }));
 
   return (
-    <ShopLayout title={"Orders history"} pageDescription={"Orders history"}>
+    <ShopLayout title={"Orders history"}>
       {!orders.length ? (
         <Box
           display="flex"

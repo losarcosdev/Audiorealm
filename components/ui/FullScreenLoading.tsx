@@ -3,7 +3,7 @@ import { ShopLayout } from "../layouts/ShopLayout";
 
 export const FullScreenLoading = () => {
   return (
-    <ShopLayout title="Loading..." pageDescription="Loading data">
+    <ShopLayout title="Loading...">
       <Box
         display="flex"
         justifyContent="center"

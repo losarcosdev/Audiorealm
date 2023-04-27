@@ -42,7 +42,7 @@ export const Categories = () => {
             className={style["category-card"]}
             sx={{ width: { xs: "90%", md: "27%" } }}
             key={image}
-            onClick={() => router.push(`/category/${category}`)}
+            onClick={() => router.push(`/${category}`)}
           >
             <CardActionArea
               sx={{

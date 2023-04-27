@@ -15,9 +15,9 @@ interface Routes {
 
 export const links: Routes[] = [
   { name: "home", route: "/" },
-  { name: "headphones", route: "/category/headphones" },
-  { name: "earhpones", route: "/category/earphones" },
-  { name: "speakers", route: "/category/speakers" },
+  { name: "headphones", route: "/headphones" },
+  { name: "earphones", route: "/earphones" },
+  { name: "speakers", route: "/speakers" },
 ];
 
 export const adminLinks: Routes[] = [

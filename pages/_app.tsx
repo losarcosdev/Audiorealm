@@ -1,11 +1,17 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
+// import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
 import { SWRConfig } from "swr";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { lightTheme } from "../themes";
 import { AuthProvider, UIProvider, CartProvider } from "../context";
+
+// TODO: Fix types
+interface AppProps {
+  Component: any;
+  pageProps: any;
+}
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

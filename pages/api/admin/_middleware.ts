@@ -7,7 +7,13 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
     secret: process.env.NEXTAUTH_SECRET,
   });
 
-  if (!session) {
+  let user = {} as any;
+
+  if (req.cookies.user) {
+    user = JSON.parse(req.cookies.user);
+  }
+
+  if (!session && !user.user) {
     return new Response(JSON.stringify({ message: "Unauthorized" }), {
       status: 401,
       headers: {
@@ -16,13 +22,24 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
     });
   }
 
-  if (session.user.role !== "admin") {
-    return new Response(JSON.stringify({ message: "Unauthorized" }), {
-      status: 401,
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  if (session) {
+    if (session.user.role !== "admin") {
+      return new Response(JSON.stringify({ message: "Unauthorized" }), {
+        status: 401,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    }
+  } else {
+    if (user.user.role !== "admin") {
+      return new Response(JSON.stringify({ message: "Unauthorized" }), {
+        status: 401,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    }
   }
 
   return NextResponse.next();
