@@ -5,7 +5,7 @@ import { useProducts } from "../hooks";
 
 const SpeakerPage: NextPage = () => {
   const { products, isLoading } = useProducts({
-    url: "/products?category=speaker",
+    url: "/products/speaker",
   });
 
   return (

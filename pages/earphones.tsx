@@ -5,7 +5,7 @@ import { useProducts } from "../hooks";
 
 const EarphonePage: NextPage = () => {
   const { products, isLoading } = useProducts({
-    url: "/products?category=earphone",
+    url: "/products/earphone",
   });
 
   return (
