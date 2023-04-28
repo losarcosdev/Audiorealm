@@ -37,14 +37,18 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar sx={{ height: "15vh", marginBottom: "1px solid gray" }}>
+    <AppBar
+      sx={{
+        height: { xs: "18vh", lg: "10vh" },
+        marginBottom: "1px solid gray",
+      }}
+    >
       <Toolbar
         sx={{
           borderBottom: ".5px solid #2a2a2a",
           justifyContent: "space-around",
           display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
-          padding: "5px",
+          flexDirection: { xs: "column", md: "row" },
         }}
       >
         <NextLink href="/" passHref>
@@ -76,7 +80,7 @@ export const Navbar = () => {
             </NextLink>
           ))}
         </Box>
-        <Box sx={{ display: "flex", gap: "15px" }}>
+        <Box sx={{ display: "flex", gap: "15px", padding: "10px" }}>
           {/* Pantallas pantallas grandes */}
           {isSearchVisible ? (
             <Input
@@ -136,6 +140,7 @@ export const Navbar = () => {
             </Link>
           </NextLink>
 
+          
           <NavCart cart={cart} showCart={showCart} setShowCart={setShowCart} />
 
           {isAuthenticated ? (

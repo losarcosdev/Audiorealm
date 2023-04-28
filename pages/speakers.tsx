@@ -17,7 +17,7 @@ const SpeakerPage: NextPage = () => {
       <Box
         sx={{
           backgroundColor: "black",
-          height: "100px",
+          height: "185px",
           marginBottom: "60px",
           display: "flex",
           alignItems: "center",
