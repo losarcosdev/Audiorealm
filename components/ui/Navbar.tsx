@@ -18,7 +18,6 @@ import {
   SearchOutlined,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
-import style from "./navbar.module.css";
 import { UIContext, CartContext, AuthContext } from "../../context";
 import { NavCart } from "./";
 import { links } from "../../utils";
@@ -38,11 +37,14 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar>
+    <AppBar sx={{ height: "15vh", marginBottom: "1px solid gray" }}>
       <Toolbar
-        className={style.navbar}
         sx={{
           borderBottom: ".5px solid #2a2a2a",
+          justifyContent: "space-around",
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          padding: "5px",
         }}
       >
         <NextLink href="/" passHref>

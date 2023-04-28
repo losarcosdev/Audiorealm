@@ -31,6 +31,7 @@
     "react-image-magnifiers": "^1.4.0",
     "react-slideshow-image": "^3.7.0",
     "react-three-fiber": "^6.0.13",
+    "sharp": "^0.32.1",
     "swr": "^2.0.3",
     "three.js": "^0.77.1"
   },

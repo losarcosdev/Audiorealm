@@ -3,9 +3,11 @@ import {
   CategoryOutlined,
   ConfirmationNumberOutlined,
   AdminPanelSettings,
+  Home,
+  Headphones,
+  Earbuds,
+  Speaker,
 } from "@mui/icons-material";
-
-type JSXComponent = () => JSX.Element;
 
 interface Routes {
   name: string;
@@ -14,10 +16,10 @@ interface Routes {
 }
 
 export const links: Routes[] = [
-  { name: "home", route: "/" },
-  { name: "headphones", route: "/headphones" },
-  { name: "earphones", route: "/earphones" },
-  { name: "speakers", route: "/speakers" },
+  { name: "home", route: "/", Component: Home },
+  { name: "headphones", route: "/headphones", Component: Headphones },
+  { name: "earphones", route: "/earphones", Component: Earbuds },
+  { name: "speakers", route: "/speakers", Component: Speaker },
 ];
 
 export const adminLinks: Routes[] = [

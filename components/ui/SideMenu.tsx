@@ -17,11 +17,7 @@ import {
   ListSubheader,
 } from "@mui/material";
 import {
-  AccountCircleOutlined,
-  AdminPanelSettings,
-  CategoryOutlined,
   ConfirmationNumberOutlined,
-  DashboardOutlined,
   EscalatorWarningOutlined,
   FemaleOutlined,
   LoginOutlined,
@@ -29,7 +25,7 @@ import {
   SearchOutlined,
   VpnKeyOutlined,
 } from "@mui/icons-material";
-import { adminLinks } from "../../utils";
+import { adminLinks, links } from "../../utils";
 
 export const SideMenu = () => {
   const { isAuthenticated, user, onLogout } = useContext(AuthContext);
@@ -85,53 +81,24 @@ export const SideMenu = () => {
             </ListItemButton>
           )}
 
-          <ListItemButton
-            sx={{
-              display: { xs: "", sm: "none" },
-              backgroundColor:
-                router.pathname === "/category/headphones"
-                  ? "lightgray"
-                  : "transparent",
-            }}
-            onClick={() => handleNavigate("/category/headphones")}
-          >
-            <ListItemIcon>
-              <FemaleOutlined />
-            </ListItemIcon>
-            <ListItemText primary={"Headphones"} />
-          </ListItemButton>
-
-          <ListItemButton
-            sx={{
-              display: { xs: "", sm: "none" },
-              backgroundColor:
-                router.pathname === "/category/earphones"
-                  ? "lightgray"
-                  : "transparent",
-            }}
-            onClick={() => handleNavigate("/category/earphones")}
-          >
-            <ListItemIcon>
-              <MaleOutlined />
-            </ListItemIcon>
-            <ListItemText primary={"Earphones"} />
-          </ListItemButton>
-
-          <ListItemButton
-            sx={{
-              display: { xs: "", sm: "none" },
-              backgroundColor:
-                router.pathname === "/category/speakers"
-                  ? "lightgray"
-                  : "transparent",
-            }}
-            onClick={() => handleNavigate("/category/speakers")}
-          >
-            <ListItemIcon>
-              <EscalatorWarningOutlined />
-            </ListItemIcon>
-            <ListItemText primary={"Speakers"} />
-          </ListItemButton>
+          {links.map(({ name, route, Component }) => (
+            <ListItemButton
+              key={route}
+              sx={{
+                display: { xs: "", sm: "none" },
+                backgroundColor:
+                  router.pathname === route ? "lightgray" : "transparent",
+              }}
+              onClick={() => handleNavigate(route)}
+            >
+              <ListItemIcon>
+                <Component />
+              </ListItemIcon>
+              <ListItemText
+                primary={`${name.slice(0, 1).toUpperCase()}${name.slice(1)}`}
+              />
+            </ListItemButton>
+          ))}
 
           {!isAuthenticated ? (
             <ListItemButton
