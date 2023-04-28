@@ -23,8 +23,8 @@ export const ShopLayout: FC<Props> = ({
         <title>{title}</title>
         <meta name="description" content={metaDescription} />
         <meta name="og:description" content={metaDescription} />
-        <meta name="title" content={`${title} - Audiophile`} />
-        <meta name="og:title" content={`${title} - Audiophile`} />
+        <meta name="title" content={`${title} - Audiorealm`} />
+        <meta name="og:title" content={`${title} - Audiorealm`} />
         <meta name="keywords" content={metaKeywords} />
 
         {imageFullUrl && <meta name="og:image" content={imageFullUrl} />}

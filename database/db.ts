@@ -31,15 +31,9 @@ export const connect = async () => {
     await mongoose.disconnect();
   }
 
-  await mongoose.connect(
-    "mongodb+srv://lucas09:OTzKd8sbo6IGLH9Y@audiophilecluster.9khkjbb.mongodb.net/audiophileDB" ||
-      ""
-  );
+  await mongoose.connect(process.env.MONGODB_URL || "");
   mongoConnection.isConnected = 1;
-  console.log(
-    "Connected to MongoDB:",
-    "mongodb+srv://lucas09:OTzKd8sbo6IGLH9Y@audiophilecluster.9khkjbb.mongodb.net/audiophileDB"
-  );
+  console.log("Connected to MongoDB:", process.env.MONGODB_URL);
 };
 
 export const disconnect = async () => {
