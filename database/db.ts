@@ -32,13 +32,13 @@ export const connect = async () => {
   }
 
   await mongoose.connect(
-    `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@audiophilecluster.9khkjbb.mongodb.net/audiophileDB` ||
+    "mongodb+srv://lucas09:OTzKd8sbo6IGLH9Y@audiophilecluster.9khkjbb.mongodb.net/audiophileDB" ||
       ""
   );
   mongoConnection.isConnected = 1;
   console.log(
     "Connected to MongoDB:",
-    `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@audiophilecluster.9khkjbb.mongodb.net/audiophileDB`
+    "mongodb+srv://lucas09:OTzKd8sbo6IGLH9Y@audiophilecluster.9khkjbb.mongodb.net/audiophileDB"
   );
 };
 
