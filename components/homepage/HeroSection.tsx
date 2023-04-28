@@ -13,6 +13,7 @@ export const HeroSection = () => {
         alignItems: "center",
         justifyContent: "space-around",
         position: "relative",
+        width: "100%",
       }}
     >
       {/* Hero Description */}
