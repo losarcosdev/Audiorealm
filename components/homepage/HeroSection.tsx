@@ -1,5 +1,4 @@
 import { Box, Typography, Button } from "@mui/material";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 export const HeroSection = () => {
@@ -50,13 +49,16 @@ export const HeroSection = () => {
           Experience natural, lifelike audio and exceptional <br /> build
           quality made for the passionate music <br /> enthusiast.
         </Typography>
-        <Button
-          onClick={() => router.push("/product/edifier_w820nb")}
-          variant="outlined"
-          color="primary"
-        >
-          SEE PRODUCT
-        </Button>
+        <Box sx={{ padding: { xs: "10px", md: "0px" } }}>
+          <Button
+            onClick={() => router.push("/product/edifier_w820nb")}
+            variant="outlined"
+            color="primary"
+            sx={{ width: "100%" }}
+          >
+            SEE PRODUCT
+          </Button>
+        </Box>
       </Box>
 
       {/* Hero Image */}
@@ -65,7 +67,7 @@ export const HeroSection = () => {
           display: { xs: "none", md: "flex" },
         }}
       >
-        <Image
+        <img
           src={"/hero-headphone.png"}
           width="500px"
           height="500px"

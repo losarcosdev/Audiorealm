@@ -5,7 +5,7 @@ import { ShopLayout } from "../../components/layouts";
 
 const EmptyCartPage = () => {
   return (
-    <ShopLayout title="Carrito vacio">
+    <ShopLayout title="Empty cart">
       <Box
         display="flex"
         justifyContent="center"
@@ -18,7 +18,7 @@ const EmptyCartPage = () => {
           <Typography>Empty cart</Typography>
           <NextLink href="/" passHref>
             <Link typography="h4" color="secondary">
-              Regresar
+              Go back
             </Link>
           </NextLink>
         </Box>

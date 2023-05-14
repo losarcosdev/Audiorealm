@@ -35,7 +35,7 @@ export const Featured = () => {
   return (
     <Box
       sx={{
-        width: "85%",
+        width: { xs: "100%", md: "85%" },
         margin: "auto",
         display: "flex",
         flexDirection: "column",

@@ -58,7 +58,9 @@ export const Footer = () => {
           helping you get the most out of personal audio. Come and visit our
           demo facility - we’re open 7 days a week.
         </Typography>
-        <Typography sx={{ color: "gray", fontWeight: "bolder" }}>
+        <Typography
+          sx={{ color: "gray", fontWeight: "bolder", fontSize: "14px" }}
+        >
           Copyright &copy; 2022. All Rights Reserved
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
@@ -123,7 +125,7 @@ export const Footer = () => {
               </Typography>
             </Link>
           </NextLink>
-          <Typography sx={{ color: "gray" }}>
+          <Typography sx={{ color: "gray", textAlign: "left" }}>
             Audiorealm is an all in one stop to fulfill your audio needs. We're
             a small team <br /> of music lovers and sound specialists who are
             devoted to helping you get the <br /> most out of personal audio.
